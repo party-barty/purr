@@ -31,16 +31,31 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 
 ----
 
-Purrfect Match 🎵 Jingle — “Meow or Never” (Upbeat & Playful)
+### Purrfect Match 🎵 Jingle — “Meow or Never” (Upbeat & Playful)
 
-Verse 1
-It’s meow or never, don’t paws, swipe right,
-Your cuddle buddy’s waiting tonight.
-From kittens to tabbies, tuxedos too,
-Each swipe brings happiness closer to you!
+[Verse 1]</br>
+It’s meow or never, don’t paws, swipe right,</br>
+Your cuddle buddy’s waiting tonight.</br>
+From kittens to tabbies, tuxedos too,</br>
+Each swipe brings happiness closer to you!</br>
 
-Chorus
-Purrfect Match — find your purr today,
-Kitties and cuddles are just a swipe away.
-From shelters to laps, the journey’s complete,
-Purrfect Match — where two hearts meet!
+[Chorus]</br>
+Purrfect Match — find your purr today,</br>
+Kitties and cuddles are just a swipe away.</br>
+From shelters to laps, the journey’s complete,</br>
+Purrfect Match — where two hearts meet!</br>
+
+Music created by: [https://huggingface.co/spaces/tencent/SongGeneration](🎵 SongGeneration Demo Space)
+
+  ```
+---
+title: Song Generation
+emoji: 🎵
+colorFrom: purple
+colorTo: gray
+sdk: docker
+app_port: 7860
+models:
+- tencent/SongGeneration
+---
+```
