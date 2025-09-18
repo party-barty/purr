@@ -1,0 +1,26 @@
+create a app that is like Tinder but it matches single people to cats that are available at their local animal shelters and rescues. give it a punny name. the target market is mostly women. the cats should have cute photos and funny bios. 
+add three more cards with cats and cat photos to the demo
+add details to the How It Works page. provide info on how to create create a human profile and a cat profile. 
+add details to the success stories page. give an example of a success story from the human POV and the cat POV. give success metrics 
+replace the image in each cat-card with one of these image file links below.: 
+https://images.unsplash.com/photo-1658957470787-30558a3e3a29
+https://images.unsplash.com/photo-1631238286762-6d2a18027c9a
+https://images.unsplash.com/photo-1706053241471-65a9d4bae7b0
+https://images.unsplash.com/photo-1701496966210-4eea1d7f7210
+https://images.unsplash.com/photo-1658957470787-30558a3e3a29
+https://images.unsplash.com/photo-1631238286762-6d2a18027c9a
+https://images.unsplash.com/photo-1706053241471-65a9d4bae7b0
+https://images.unsplash.com/photo-1701496966210-4eea1d7f7210
+map the cats.img value to div.cat-card>img.src value. replace existing img src
+there seems to be a javascript error on the home page that is preventing the next cat-card from displaying after the first one is swiped away. please fix the script so that I can swipe through all of the cat cards. 
+add an example (mock-up or illustration) of how to create a great profile to both secions: cat lovers and shelters & rescues
+create a new page for a blog post. link the blog post to the story-card divs. Create a blog post about  how Emily R found and adopted her first cat, Luna through our app. Write a success story that starts off by painting a grim picture for Emily as a  first-time cat owner who didnt know where to start when looking to adopt. also create a short backstory for Luna. Give Luna a rags-to-riches story arch. 
+
+include a funny short story about luna getting the zoomies on during full moons. include some cute photos of them together. 
+create a new page for a blog post. link the blog post to the story-card divs. Create a blog post about  how Emily R found and adopted her first cat, Luna through our app. Write a success story that starts off by painting a grim picture for Emily as a  first-time cat owner who didnt know where to start when looking to adopt. also create a short backstory for Luna. Give Luna a rags-to-riches story arch. 
+
+include a funny short story about luna getting the zoomies on during full moons. include some cute photos of them together. 
+replace bullet point markers with a paw print icon 
+for the entire website theme, lets try a more modern, gender neutral color palette. 
+
+create a new page for a blog post. link the blog post to the story-card div for Sarah and Mochi. Create a larger than life story about how Mochi's love for feathers inspired Sarah to become a costume designer and custom cat toy creator. Taylor Swift heard about her talents and about Mochi and asked her to design cat costumes that matched Taylor's Eras Tour costumes for her two cats, Olivia Benson and Meredith Grey. Sarah and Monchi made each others wildest dreams come true. Maybe throw in a lyric from Wildest Dreams by Taylor Swift.
