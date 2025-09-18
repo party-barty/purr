@@ -45,7 +45,7 @@ Kitties and cuddles are just a swipe away.</br>
 From shelters to laps, the journey’s complete,</br>
 Purrfect Match — where two hearts meet!</br>
 
-Music created by: [https://huggingface.co/spaces/tencent/SongGeneration](🎵 SongGeneration Demo Space)
+Music created by: [🎵 SongGeneration Demo Space](https://huggingface.co/spaces/tencent/SongGeneration)
 
   ```
 ---
