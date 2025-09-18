@@ -30,3 +30,17 @@ tags:
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
 ----
+
+Purrfect Match 🎵 Jingle — “Meow or Never” (Upbeat & Playful)
+
+Verse 1
+It’s meow or never, don’t paws, swipe right,
+Your cuddle buddy’s waiting tonight.
+From kittens to tabbies, tuxedos too,
+Each swipe brings happiness closer to you!
+
+Chorus
+Purrfect Match — find your purr today,
+Kitties and cuddles are just a swipe away.
+From shelters to laps, the journey’s complete,
+Purrfect Match — where two hearts meet!
