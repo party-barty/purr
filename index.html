@@ -125,6 +125,20 @@
             </div>
         </main>
 
+        <!-- Audio Player -->
+        <div class="bg-white bg-opacity-90 py-4 px-6">
+            <div class="container mx-auto flex items-center justify-center space-x-4">
+                <audio id="theme-song" src="https://github.com/user-attachments/files/22398409/Purrfect.Match.jingle-Meow.or.Never.mp3"></audio>
+                <button id="play-btn" class="bg-pink-500 hover:bg-pink-600 text-white p-2 rounded-full">
+                    <i data-feather="play" class="w-4 h-4"></i>
+                </button>
+                <button id="pause-btn" class="bg-pink-100 hover:bg-pink-200 text-pink-600 p-2 rounded-full">
+                    <i data-feather="pause" class="w-4 h-4"></i>
+                </button>
+                <span class="text-sm text-gray-600">Purrfect Match Theme Song</span>
+            </div>
+        </div>
+
         <!-- Footer -->
         <footer class="bg-white bg-opacity-90 py-6 px-6">
             <div class="container mx-auto text-center text-gray-600">
@@ -315,6 +329,44 @@
 
         // Initialize first cat
         updateCatCard();
+
+        // Audio player functionality
+        const audio = document.getElementById('theme-song');
+        const playBtn = document.getElementById('play-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        let hasPlayed = false;
+
+        // Play audio after 10 seconds
+        setTimeout(() => {
+            if (!hasPlayed) {
+                audio.play();
+                hasPlayed = true;
+            }
+        }, 10000);
+
+        // Button event listeners
+        playBtn.addEventListener('click', () => {
+            audio.play();
+            hasPlayed = true;
+        });
+
+        pauseBtn.addEventListener('click', () => {
+            audio.pause();
+        });
+
+        // Update icons based on playback state
+        audio.addEventListener('play', () => {
+            playBtn.classList.add('hidden');
+            pauseBtn.classList.remove('hidden');
+        });
+
+        audio.addEventListener('pause', () => {
+            playBtn.classList.remove('hidden');
+            pauseBtn.classList.add('hidden');
+        });
+
+        // Hide pause button initially
+        pauseBtn.classList.add('hidden');
     </script>
 </body>
 </html>
