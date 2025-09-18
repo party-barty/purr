@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purrfect Match - Find Your Feline Soulmate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        .cat-card {
+            background-size: cover;
+            background-position: center;
+            transition: all 0.3s ease;
+        }
+        .cat-card:hover {
+            transform: scale(1.02);
+        }
+        .heart-burst {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            color: #ff4081;
+            opacity: 0;
+            z-index: 100;
+        }
+        .swipe-left {
+            transform: translateX(-100%) rotate(-15deg);
+            opacity: 0;
+        }
+        .swipe-right {
+            transform: translateX(100%) rotate(15deg);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-sans">
+    <div id="vanta-bg" class="fixed inset-0 z-0"></div>
+    <div class="relative z-10 min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white bg-opacity-90 shadow-sm py-4 px-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <i data-feather="heart" class="text-pink-500 mr-2"></i>
+                    <h1 class="text-2xl font-bold text-pink-600">Purrfect Match</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-pink-600 hover:text-pink-800 font-medium">Home</a>
+                    <a href="howitworks.html" class="text-gray-600 hover:text-pink-600 font-medium">How It Works</a>
+                    <a href="successstories.html" class="text-gray-600 hover:text-pink-600 font-medium">Success Stories</a>
+                    <a href="#" class="text-gray-600 hover:text-pink-600 font-medium">Shelters</a>
+                </nav>
+                <button class="md:hidden">
+                    <i data-feather="menu" class="text-gray-600"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex flex-col items-center justify-center px-4 py-8">
+            <div class="w-full max-w-md" data-aos="fade-up">
+                <!-- Cat Card -->
+                <div id="cat-card" class="cat-card relative bg-white rounded-2xl shadow-xl overflow-hidden h-96 w-full mb-6">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                    <img src="https://images.unsplash.com/photo-1658957470787-30558a3e3a29" alt="Adorable cat" class="w-full h-full object-cover">
+                    
+                    <div class="absolute bottom-0 left-0 p-6 text-white w-full">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h2 class="text-2xl font-bold">Whiskers</h2>
+                                <p class="text-lg">3 years old</p>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs font-semibold">Playful</span>
+                                <span class="bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs font-semibold">Cuddly</span>
+                            </div>
+                        </div>
+                        <p class="mt-2">"Professional biscuit maker and part-time lap warmer. Looking for someone to appreciate my 3am serenades."</p>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-center space-x-8">
+                    <button id="dislike-btn" class="bg-white p-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+                        <i data-feather="x" class="text-red-500 w-8 h-8"></i>
+                    </button>
+                    <button id="super-like-btn" class="bg-white p-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+                        <i data-feather="star" class="text-blue-400 w-8 h-8"></i>
+                    </button>
+                    <button id="like-btn" class="bg-white p-4 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+                        <i data-feather="heart" class="text-pink-500 w-8 h-8"></i>
+                    </button>
+                </div>
+
+                <!-- Heart Animation (hidden by default) -->
+                <div id="heart-burst" class="heart-burst">
+                    <i data-feather="heart"></i>
+                </div>
+            </div>
+
+            <!-- Match Notification -->
+            <div id="match-notification" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+                <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center" data-aos="zoom-in">
+                    <div class="flex justify-center mb-4">
+                        <i data-feather="heart" class="text-pink-500 w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pink-600 mb-2">It's a Purrfect Match!</h3>
+                    <p class="text-gray-600 mb-6">You and Whiskers would make a great pair! Would you like to arrange a meet-up?</p>
+                    <div class="flex space-x-4">
+                        <button class="flex-1 bg-gray-200 text-gray-700 py-2 rounded-lg hover:bg-gray-300">Maybe Later</button>
+                        <button class="flex-1 bg-pink-500 text-white py-2 rounded-lg hover:bg-pink-600">Yes Please!</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white bg-opacity-90 py-6 px-6">
+            <div class="container mx-auto text-center text-gray-600">
+                <p>Made with <i data-feather="heart" class="inline text-pink-500 w-4 h-4"></i> for cat lovers everywhere</p>
+                <p class="mt-2 text-sm">Helping shelter cats find their forever homes since 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize animations
+        AOS.init();
+        feather.replace();
+
+        // Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xff9db6,
+            backgroundColor: 0xfff1f5,
+            points: 10.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+
+        // Swipe functionality
+        const catCard = document.getElementById('cat-card');
+        const likeBtn = document.getElementById('like-btn');
+        const dislikeBtn = document.getElementById('dislike-btn');
+        const superLikeBtn = document.getElementById('super-like-btn');
+        const heartBurst = document.getElementById('heart-burst');
+        const matchNotification = document.getElementById('match-notification');
+
+        let isAnimating = false;
+
+        // Sample cat data
+        const cats = [
+            {
+                name: "Whiskers",
+                age: "3 years old",
+                bio: "Professional biscuit maker and part-time lap warmer. Looking for someone to appreciate my 3am serenades.",
+                tags: ["Playful", "Cuddly"],
+                img: "https://images.unsplash.com/photo-1658957470787-30558a3e3a29"
+            },
+            {
+                name: "Mittens",
+                age: "2 years old",
+                bio: "Former street cat turned sophisticated lady. I enjoy sunbeams and knocking things off tables.",
+                tags: ["Adventurous", "Independent"],
+                img: "https://images.unsplash.com/photo-1631238286762-6d2a18027c9a"
+            },
+            {
+                name: "Oliver",
+                age: "5 years old",
+                bio: "Gentle giant looking for a quiet home. I'm great at keeping your lap warm during movie nights.",
+                tags: ["Gentle", "Loyal"],
+                img: "https://images.unsplash.com/photo-1706053241471-65a9d4bae7b0"
+            },
+            {
+                name: "Luna",
+                age: "1 year old",
+                bio: "Energetic kitten with a passion for zoomies at 3am. Will trade cuddles for treats.",
+                tags: ["Energetic", "Playful"],
+                img: "https://images.unsplash.com/photo-1701496966210-4eea1d7f7210"
+            },
+            {
+                name: "Simba",
+                age: "4 years old",
+                bio: "Majestic floof who rules his kingdom from the highest perch. Demands belly rubs on his terms.",
+                tags: ["Regal", "Fluffy"],
+                img: "https://images.unsplash.com/photo-1658957470787-30558a3e3a29"
+            },
+            {
+                name: "Bella",
+                age: "2 years old",
+                bio: "Social butterfly who loves meeting new people. My purr motor runs at maximum efficiency.",
+                tags: ["Friendly", "Vocal"],
+                img: "https://images.unsplash.com/photo-1631238286762-6d2a18027c9a"
+            },
+            {
+                name: "Leo",
+                age: "6 months old",
+                bio: "Tiny troublemaker with a heart of gold. Still learning that human faces aren't for scratching.",
+                tags: ["Curious", "Mischievous"],
+                img: "https://images.unsplash.com/photo-1706053241471-65a9d4bae7b0"
+            },
+            {
+                name: "Cleo",
+                age: "5 years old",
+                bio: "Sophisticated lady who enjoys fine dining (wet food only) and long naps in sunbeams.",
+                tags: ["Elegant", "Chill"],
+                img: "https://images.unsplash.com/photo-1701496966210-4eea1d7f7210"
+            }
+        ];
+
+        let currentCatIndex = 0;
+
+        function updateCatCard() {
+            const cat = cats[currentCatIndex];
+            const img = catCard.querySelector('img');
+            const name = catCard.querySelector('h2');
+            const age = catCard.querySelector('p:nth-of-type(1)');
+            const bio = catCard.querySelector('p:nth-of-type(2)');
+            
+            if (img) img.src = cat.img;
+            if (name) name.textContent = cat.name;
+            if (age) age.textContent = cat.age;
+            if (bio) bio.textContent = cat.bio;
+            
+            const tagsContainer = catCard.querySelector('.flex.space-x-2');
+            if (tagsContainer) {
+                tagsContainer.innerHTML = '';
+                cat.tags.forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = 'bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs font-semibold';
+                    span.textContent = tag;
+                    tagsContainer.appendChild(span);
+                });
+            }
+        }
+
+        function animateSwipe(direction) {
+            if (isAnimating) return;
+            isAnimating = true;
+            
+            catCard.classList.add(direction === 'right' ? 'swipe-right' : 'swipe-left');
+            
+            setTimeout(() => {
+                catCard.classList.remove('swipe-right', 'swipe-left');
+                catCard.style.opacity = '0';
+                
+                setTimeout(() => {
+                    currentCatIndex++;
+                    if (currentCatIndex >= cats.length) {
+                        currentCatIndex = 0; // Loop back to first cat
+                    }
+                    updateCatCard();
+                    catCard.style.opacity = '1';
+                    isAnimating = false;
+                    
+                    // Show match notification randomly (20% chance)
+                    if (direction === 'right' && Math.random() < 0.2) {
+                        matchNotification.classList.remove('hidden');
+                    }
+                }, 300);
+            }, 500);
+        }
+
+        function showHeartBurst() {
+            heartBurst.style.opacity = '1';
+            heartBurst.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            
+            setTimeout(() => {
+                heartBurst.style.opacity = '0';
+                heartBurst.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 1000);
+        }
+
+        // Event listeners
+        likeBtn.addEventListener('click', () => {
+            animateSwipe('right');
+            showHeartBurst();
+        });
+
+        dislikeBtn.addEventListener('click', () => {
+            animateSwipe('left');
+        });
+
+        superLikeBtn.addEventListener('click', () => {
+            showHeartBurst();
+            setTimeout(() => {
+                matchNotification.classList.remove('hidden');
+            }, 500);
+        });
+
+        // Close match notification
+        matchNotification.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                matchNotification.classList.add('hidden');
+            });
+        });
+
+        // Initialize first cat
+        updateCatCard();
+    </script>
+</body>
+</html>
