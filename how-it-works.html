@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Purrfect Match</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-sans">
+    <div class="relative min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white bg-opacity-90 shadow-sm py-4 px-6">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <i data-feather="heart" class="text-pink-500 mr-2"></i>
+                    <h1 class="text-2xl font-bold text-pink-600">Purrfect Match</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-600 hover:text-pink-600 font-medium">Home</a>
+                    <a href="howitworks.html" class="text-pink-600 hover:text-pink-800 font-medium">How It Works</a>
+                    <a href="successstories.html" class="text-gray-600 hover:text-pink-600 font-medium">Success Stories</a>
+                    <a href="#" class="text-gray-600 hover:text-pink-600 font-medium">Shelters</a>
+                </nav>
+                <button class="md:hidden">
+                    <i data-feather="menu" class="text-gray-600"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow container mx-auto px-4 py-12">
+            <section class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-pink-600 mb-4">How Purrfect Match Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Find your feline soulmate in just a few simple steps!</p>
+            </section>
+
+            <section class="mb-20">
+                <h3 class="text-2xl font-bold text-pink-600 mb-8 text-center">For Cat Lovers</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Create Your Profile</h4>
+                        <p class="text-gray-600">
+                            Tell us about yourself! Share your lifestyle, living situation, and what you're looking for in a feline companion.
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Profile Tips:</p>
+                            <ul class="text-xs text-gray-600 list-disc pl-5 mt-1">
+                                <li>Be honest about your availability</li>
+                                <li>Mention any pet experience</li>
+                                <li>Describe your ideal cat personality</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Swipe & Match</h4>
+                        <p class="text-gray-600">
+                            Browse through profiles of adorable adoptable cats in your area. Swipe right if you're interested, left to pass.
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Pro Tip:</p>
+                            <p class="text-xs text-gray-600 mt-1">Read the bios carefully - they reveal each cat's unique personality!</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Meet Your Match</h4>
+                        <p class="text-gray-600">
+                            When it's a match, we'll connect you with the shelter to arrange a meet-and-greet. The adoption process begins!
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Note:</p>
+                            <p class="text-xs text-gray-600 mt-1">Shelters may have additional screening questions before finalizing adoptions.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <h3 class="text-2xl font-bold text-pink-600 mb-8 text-center">For Shelters & Rescues</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Register Your Shelter</h4>
+                        <p class="text-gray-600">
+                            Create an account for your organization and verify your 501(c)(3) status to join our network.
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Requirements:</p>
+                            <ul class="text-xs text-gray-600 list-disc pl-5 mt-1">
+                                <li>Proof of nonprofit status</li>
+                                <li>Adoption policies</li>
+                                <li>Veterinary references</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">2</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Create Cat Profiles</h4>
+                        <p class="text-gray-600">
+                            Add your adoptable cats with photos and engaging bios that showcase their personalities.
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Profile Tips:</p>
+                            <ul class="text-xs text-gray-600 list-disc pl-5 mt-1">
+                                <li>Use high-quality photos</li>
+                                <li>Highlight unique traits</li>
+                                <li>Be honest about special needs</li>
+                                <li>Add fun facts (e.g., "Loves belly rubs!")</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card bg-white rounded-xl shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4 mx-auto">
+                            <span class="text-pink-600 font-bold text-xl">3</span>
+                        </div>
+                        <h4 class="text-xl font-semibold text-center mb-3">Connect with Adopters</h4>
+                        <p class="text-gray-600">
+                            Review matches, communicate with potential adopters, and schedule meet-ups through our platform.
+                        </p>
+                        <div class="mt-4 p-4 bg-pink-50 rounded-lg">
+                            <p class="text-sm font-medium text-pink-600">Features:</p>
+                            <ul class="text-xs text-gray-600 list-disc pl-5 mt-1">
+                                <li>Messaging system</li>
+                                <li>Adoption application forms</li>
+                                <li>Meet-up scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-pink-600 mb-6 text-center">Ready to Find Your Purrfect Match?</h3>
+                <div class="flex flex-col md:flex-row justify-center gap-4">
+                    <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors">
+                        Sign Up as Adopter
+                    </a>
+                    <a href="#" class="bg-pink-100 hover:bg-pink-200 text-pink-600 font-medium py-3 px-6 rounded-lg text-center transition-colors">
+                        Register Your Shelter
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white bg-opacity-90 py-6 px-6">
+            <div class="container mx-auto text-center text-gray-600">
+                <p>Made with <i data-feather="heart" class="inline text-pink-500 w-4 h-4"></i> for cat lovers everywhere</p>
+                <p class="mt-2 text-sm">Helping shelter cats find their forever homes since 2023</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize animations
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>
